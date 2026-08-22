@@ -1,0 +1,10 @@
+Package: com.clock26.locktime
+Name: Clock26
+Version: 4.1
+Architecture: iphoneos-arm64e
+Description: Restyles the lock-screen time with Apple's axs66 variable font (.SF Adaptive Soft Numeric). Three sliders — Size (overall scale), Height (HGHT axis, taller digits) and Width (wdth axis, narrower digits) — all as true vector transforms, so the glyphs stay razor-sharp (no transform blur). Crucially it fixes the "clipped once it grows past the stock time box" problem: the label's own frame is expanded around its center and clipping/masking is disabled up the view chain to the window, so enlarged or stretched digits are never cut off. The font is re-asserted every layout pass so a system refresh can't revert it, and the stock font/box is fully restored when disabled. No glass, no colour, no position knobs.
+Maintainer: Clock26
+Author: Clock26
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Tag: purpose::lockscreen, compatible_min_ios::15.0

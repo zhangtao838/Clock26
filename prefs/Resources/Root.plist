@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Clock26 · 拉高时钟</string>
+			<key>footerText</key>
+			<string>把锁屏时间数字换成 Apple 可变字体 axs66（.SF Adaptive Soft Numeric），可调大小、拉高(HGHT)、宽度(wdth)——矢量变形，清晰不糊。放大/拉高后会自动撑开边框、关闭裁剪，不会被原时间区域切掉。改完即时生效，无需注销。</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.clock26.locktime/prefsChanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.clock26.locktime</string>
+			<key>key</key>
+			<string>Enabled</string>
+			<key>label</key>
+			<string>启用（替换字体拉高）</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>大小</string>
+			<key>footerText</key>
+			<string>整体放大倍数：1.0 = 原始大小，2.0 = 两倍。矢量放大，清晰不糊。放大后数字若超出原时间区域，插件会自动撑开边框、关闭裁剪，不会被切。</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.clock26.locktime/prefsChanged</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>1.0</real>
+			<key>defaults</key>
+			<string>com.clock26.locktime</string>
+			<key>key</key>
+			<string>Scale</string>
+			<key>max</key>
+			<real>3.0</real>
+			<key>min</key>
+			<real>0.5</real>
+			<key>showValue</key>
+			<true/>
+			<key>label</key>
+			<string>大小 (倍)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>拉高程度</string>
+			<key>footerText</key>
+			<string>HGHT 高度轴：100 = 原始高度，500 = 最高。数字只在纵向变高，宽度不变。建议 250–350 之间。</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.clock26.locktime/prefsChanged</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>300</real>
+			<key>defaults</key>
+			<string>com.clock26.locktime</string>
+			<key>key</key>
+			<string>Height</string>
+			<key>max</key>
+			<real>500</real>
+			<key>min</key>
+			<real>100</real>
+			<key>showValue</key>
+			<true/>
+			<key>label</key>
+			<string>高度 (HGHT)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>宽度</string>
+			<key>footerText</key>
+			<string>wdth 宽度轴：100 = 满宽，60 = 最窄。数字左右变窄，适合把拉高后偏胖的数字收一点。</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.clock26.locktime/prefsChanged</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>100</real>
+			<key>defaults</key>
+			<string>com.clock26.locktime</string>
+			<key>key</key>
+			<string>Width</string>
+			<key>max</key>
+			<real>100</real>
+			<key>min</key>
+			<real>60</real>
+			<key>showValue</key>
+			<true/>
+			<key>label</key>
+			<string>宽度 (wdth)</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>操作</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>respring</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>注销 Respring</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Clock26</string>
+</dict>
+</plist>
